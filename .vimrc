@@ -38,7 +38,11 @@ set shiftwidth=2
 set autoindent
 set smartindent
 set cindent
+
+" ALE Options
 highlight ALEError ctermbg=Brown
+nmap <silent> <leader>aj :ALENext<cr>
+nmap <silent> <leader>ak :ALEPrevious<cr>
 
 " FINDING FILES:
 
