@@ -38,6 +38,7 @@ set shiftwidth=2
 set autoindent
 set smartindent
 set cindent
+highlight ALEError ctermbg=Brown
 
 " FINDING FILES:
 
