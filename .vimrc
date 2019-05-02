@@ -5,6 +5,7 @@ call plug#begin('~/.vim/plugged')
   Plug 'leafgarland/typescript-vim'
   Plug 'HerringtonDarkholme/yats.vim'
   Plug 'w0rp/ale'
+  Plug 'Quramy/tsuquyomi'
 " Initialize plugin system
 call plug#end()
 
