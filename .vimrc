@@ -40,9 +40,10 @@ set smartindent
 set cindent
 
 " ALE Options
-highlight ALEError ctermbg=Brown
+let g:ale_set_highlights = 0
 nmap <silent> <leader>aj :ALENext<cr>
 nmap <silent> <leader>ak :ALEPrevious<cr>
+let g:ale_completion_enabled = 1
 
 " FINDING FILES:
 
