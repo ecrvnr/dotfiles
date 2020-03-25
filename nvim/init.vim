@@ -2,12 +2,15 @@
 " Specify a directory for plugins
 call plug#begin('~/.vim/plugged')
 " Make sure you use single quotes
-  Plug 'leafgarland/typescript-vim'
-  Plug 'HerringtonDarkholme/yats.vim'
-  Plug 'w0rp/ale'
-  Plug 'Quramy/tsuquyomi'
+Plug 'HerringtonDarkholme/yats.vim'
+Plug 'mhartington/nvim-typescript', {'do': './install.sh'}
+" For async completion
+Plug 'Shougo/deoplete.nvim'
+" For Denite features
+Plug 'Shougo/denite.nvim'
 " Initialize plugin system
 call plug#end()
+let g:deoplete#enable_at_startup = 1
 
 " BASIC SETUP:
 set runtimepath+=~/.vim,~/.vim/after  
@@ -38,12 +41,6 @@ set shiftwidth=2
 set autoindent
 set smartindent
 set cindent
-
-" ALE Options
-let g:ale_set_highlights = 0
-nmap <silent> <leader>aj :ALENext<cr>
-nmap <silent> <leader>ak :ALEPrevious<cr>
-let g:ale_completion_enabled = 1
 
 " FINDING FILES:
 
