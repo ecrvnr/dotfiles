@@ -29,7 +29,7 @@ set t_Co=256
 " Dark Theme
 "colorscheme gruvbox
 " Light theme
-colorscheme onehalflight
+colorscheme onehalfdark
 
 inoremap jk <ESC>
 nmap <C-n> :NERDTreeToggle<CR>
