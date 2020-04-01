@@ -14,12 +14,22 @@ Plug 'scrooloose/nerdcommenter'
 
 Plug 'christoomey/vim-tmux-navigator'
 
-Plug 'morhetz/gruvbox'
+" Dark Theme
+"Plug 'morhetz/gruvbox'
+" Light Theme
+Plug 'sonph/onehalf', {'rtp': 'vim/'}
 
 Plug 'HerringtonDarkholme/yats.vim' " TS Syntax
 
 " Initialize plugin system
 call plug#end()
+
+syntax on
+set t_Co=256
+" Dark Theme
+"colorscheme gruvbox
+" Light theme
+colorscheme onehalflight
 
 inoremap jk <ESC>
 nmap <C-n> :NERDTreeToggle<CR>
@@ -73,7 +83,6 @@ set shiftwidth=2
 " always uses spaces instead of tab characters
 set expandtab
 
-colorscheme gruvbox
 
 " sync open file with NERDTree
 " " Check if NERDTree is open or active
@@ -223,5 +232,5 @@ nnoremap <silent> <space>k  :<C-u>CocPrev<CR>
 " Resume latest coc list
 nnoremap <silent> <space>p  :<C-u>CocListResume<CR>
 
-let g:python3_host_prog='C:/Python38/python.exe'
-let g:python_host_prog='C:/Python27/python.exe'
+" let g:python3_host_prog='C:/Python38/python.exe'
+" let g:python_host_prog='C:/Python27/python.exe'
