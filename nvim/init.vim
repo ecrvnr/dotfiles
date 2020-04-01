@@ -222,3 +222,6 @@ nnoremap <silent> <space>j  :<C-u>CocNext<CR>
 nnoremap <silent> <space>k  :<C-u>CocPrev<CR>
 " Resume latest coc list
 nnoremap <silent> <space>p  :<C-u>CocListResume<CR>
+
+let g:python3_host_prog='C:/Python38/python.exe'
+let g:python_host_prog='C:/Python27/python.exe'
