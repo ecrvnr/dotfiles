@@ -1,6 +1,7 @@
 " LOAD PLUGINS:
 " Specify a directory for plugins
 call plug#begin('~/.vim/plugged')
+Plug 'danilo-augusto/vim-afterglow'
 " Make sure you use single quotes
 Plug 'HerringtonDarkholme/yats.vim'
 Plug 'mhartington/nvim-typescript', {'do': './install.sh'}
@@ -9,12 +10,16 @@ Plug 'Shougo/deoplete.nvim'
 " For Denite features
 Plug 'Shougo/denite.nvim'
 " Initialize plugin system
-call plug#end()
 let g:deoplete#enable_at_startup = 1
+let g:python3_host_prog = 'C:/Python38/python.exe'
+let g:python_host_prog = 'C:/Python38/python.exe'
+call plug#end()
+
 
 " BASIC SETUP:
 set runtimepath+=~/.vim,~/.vim/after  
 set packpath+=~/.vim
+colorscheme afterglow 
 
 " enter the current millenium
 set nocompatible
@@ -42,8 +47,14 @@ set autoindent
 set smartindent
 set cindent
 
-" FINDING FILES:
+:set number relativenumber
+:augroup numbertoggle
+:  autocmd!
+:  autocmd BufEnter,FocusGained,InsertLeave * set relativenumber
+:  autocmd BufLeave,FocusLost,InsertEnter   * set norelativenumber
+:augroup END
 
+" FINDING FILES:
 " Search down into subfolders
 " Provides tab-completion for all file-related tasks
 set path+=**

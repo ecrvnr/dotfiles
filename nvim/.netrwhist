@@ -1,3 +1,12 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhistcnt =1
-let g:netrw_dirhist_1='/Users/ecrvnr/Development/portfolio'
+let g:netrw_dirhistcnt =0
+let g:netrw_dirhist_0='E:\nstadler\Documents\Development\Saudia\sv-booking'
+let g:netrw_dirhist_9='E:/nstadler/Documents/Development/Saudia/sv-booking'
+let g:netrw_dirhist_8='E:/'
+let g:netrw_dirhist_7='E:/nstadler/Downloads/neovim-qt/bin'
+let g:netrw_dirhist_6='E:/nstadler/Documents/Development/Saudia/sv-booking'
+let g:netrw_dirhist_5='E:/nstadler/Documents/Development/Saudia'
+let g:netrw_dirhist_4='E:/nstadler/Documents/Development'
+let g:netrw_dirhist_3='E:/nstadler/Documents'
+let g:netrw_dirhist_2='E:/'
+let g:netrw_dirhist_1='E:/nstadler'
