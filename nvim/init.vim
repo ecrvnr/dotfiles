@@ -12,7 +12,7 @@ Plug 'Shougo/denite.nvim'
 " Initialize plugin system
 let g:deoplete#enable_at_startup = 1
 let g:python3_host_prog = 'C:/Python38/python.exe'
-let g:python_host_prog = 'C:/Python38/python.exe'
+let g:python_host_prog = 'C:/Python27/python.exe'
 call plug#end()
 
 
