@@ -20,6 +20,7 @@ set t_Co=256
 " Dark Theme
 colorscheme gruvbox
 
+set autoread
 set clipboard=unnamedplus
 inoremap jk <ESC>
 
