@@ -152,8 +152,16 @@ command! -nargs=? Fold :call     CocAction('fold', <f-args>)
 " use `:OR` for organize import of current buffer
 command! -nargs=0 OR   :call     CocAction('runCommand', 'editor.action.organizeImport')
 
+" Add filename in window title
+set title
 " Add status line support, for integration with other plugin, checkout `:h coc-status`
-set statusline^=%{coc#status()}%{get(b:,'coc_current_function','')}
+set laststatus=2
+set statusline=\ \ \ \ 
+set statusline+=%t
+set statusline+=%=
+set statusline+=%{coc#status()}
+set statusline+=%{get(b:,'coc_current_function','')}
+set statusline+=\ \ \ \ 
 " Use <c-space> to trigger completion.
 
 if has('nvim')
