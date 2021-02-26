@@ -1,7 +1,15 @@
 {
   "suggest.noselect": false,
+  "coc.preferences.extensionUpdateCheck": "daily",
+  "coc.preferences.silentAutoupdate": true,
+  "coc.preferences.enableMarkdown": true,
+  "typescript.preferences.importModuleSpecifier": "auto",
+  "typescript.preferences.importModuleSpecifierEnding": "index",
+  "prettier.eslintIntegration": true,
+  "prettier.tslintIntegration": true,
+  "prettier.stylelintIntegration": true,
   "coc.preferences.formatOnSaveFiletypes": [
-    "javascript",
+    "*",
     "typescript",
     "typescriptreact",
     "json",
@@ -10,3 +18,4 @@
     "graphql"
   ]
 }
+
