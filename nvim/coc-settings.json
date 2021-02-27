@@ -8,6 +8,7 @@
   "prettier.eslintIntegration": true,
   "prettier.tslintIntegration": true,
   "prettier.stylelintIntegration": true,
+  "snippets.ultisnips.directories": ["UltiSnips", "~/.config/nvim/utils/snips"],
   "coc.preferences.formatOnSaveFiletypes": [
     "*",
     "typescript",
@@ -18,4 +19,3 @@
     "graphql"
   ]
 }
-
