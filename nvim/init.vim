@@ -14,7 +14,7 @@ Plug 'ctrlpvim/ctrlp.vim'
 " fuzzy find files
 Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }}
 " Dark Theme
-Plug 'morhetz/gruvbox'
+Plug 'sonph/onehalf', { 'rtp': 'vim' }
 
 Plug 'HerringtonDarkholme/yats.vim' " TS Syntax
 
@@ -24,7 +24,7 @@ call plug#end()
 syntax on
 set t_Co=256
 " Dark Theme
-colorscheme gruvbox
+colorscheme onehalflight
 
 set autoread
 set clipboard=unnamedplus
