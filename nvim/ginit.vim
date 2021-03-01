@@ -1,4 +1,4 @@
-GuiFont! FiraCode NF:h10
+GuiFont! FuraCode Nerd Font:h12
 GuiTabline 0
 GuiPopupmenu 0
-call GuiWindowMaximized(1)
+

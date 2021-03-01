@@ -5,8 +5,14 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 let g:coc_global_extensions = ['coc-java', 'coc-pairs', 'coc-snippets', 'coc-tslint-plugin', 'coc-tsserver', 'coc-emmet', 'coc-css', 'coc-html', 'coc-json', 'coc-yank', 'coc-prettier', 'coc-eslint', 'coc-angular']
 Plug 'ryanoasis/vim-devicons'
 Plug 'airblade/vim-gitgutter'
-Plug 'ctrlpvim/ctrlp.vim' " fuzzy find files
-
+Plug 'SirVer/ultisnips'
+Plug 'honza/vim-snippets'
+Plug 'vim-pandoc/vim-pandoc-syntax'
+" tabular plugin is used to format tables
+Plug 'godlygeek/tabular'
+Plug 'ctrlpvim/ctrlp.vim'
+" fuzzy find files
+Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }}
 " Dark Theme
 Plug 'morhetz/gruvbox'
 
@@ -24,15 +30,16 @@ set autoread
 set clipboard=unnamedplus
 inoremap jk <ESC>
 
-" vim-prettier
-"let g:prettier#quickfix_enabled = 0
-"let g:prettier#quickfix_auto_focus = 0
 " prettier command for coc
 command! -nargs=0 Prettier :CocCommand prettier.formatFile
-" run prettier on save
-"let g:prettier#autoformat = 0
-"autocmd BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.md,*.vue,*.yaml,*.html PrettierAsync
 
+" pandoc syntax
+augroup pandoc_syntax
+    au! BufNewFile,BufFilePre,BufRead *.md set filetype=markdown.pandoc
+augroup END
+" do not close the preview tab when switching to other buffers
+let g:mkdp_auto_close = 0
+nnoremap <M-m> :MarkdownPreview<CR>
 
 " ctrlp
 let g:ctrlp_user_command = ['.git/', 'git --git-dir=%s/.git ls-files -oc --exclude-standard']
