@@ -7,12 +7,8 @@ Plug 'ryanoasis/vim-devicons'
 Plug 'airblade/vim-gitgutter'
 Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
-Plug 'vim-pandoc/vim-pandoc-syntax'
-" tabular plugin is used to format tables
-Plug 'godlygeek/tabular'
+Plug 'scrooloose/nerdtree'
 Plug 'ctrlpvim/ctrlp.vim'
-" fuzzy find files
-Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }}
 " Dark Theme
 Plug 'sonph/onehalf', { 'rtp': 'vim' }
 
@@ -23,23 +19,21 @@ call plug#end()
 
 syntax on
 set t_Co=256
-" Dark Theme
+" Theme
 colorscheme onehalflight
 
 set autoread
 set clipboard=unnamedplus
 inoremap jk <ESC>
+"
+" NERDTree
+nnoremap <leader>nn :NERDTreeToggle<CR>
+nnoremap <leader>nf :NERDTreeFind<CR>
+let NERDTreeStatusline="%{exists('b:NERDTree')?fnamemodify(b:NERDTree.root.path.str(), ':~'):''}"
+let NERDTreeIgnore = ['\.pyc$', '^__pycache__$']
 
 " prettier command for coc
 command! -nargs=0 Prettier :CocCommand prettier.formatFile
-
-" pandoc syntax
-augroup pandoc_syntax
-    au! BufNewFile,BufFilePre,BufRead *.md set filetype=markdown.pandoc
-augroup END
-" do not close the preview tab when switching to other buffers
-let g:mkdp_auto_close = 0
-nnoremap <M-m> :MarkdownPreview<CR>
 
 " ctrlp
 let g:ctrlp_user_command = ['.git/', 'git --git-dir=%s/.git ls-files -oc --exclude-standard']
