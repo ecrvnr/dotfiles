@@ -8,6 +8,10 @@ call plug#end()
 
 """"""""""""" VARIABLES """"""""""""
 
+" Vim variables
+
+let g:netrw_list_hide= '.*\.swp$,.DS_Store,*/tmp/*,*.so,*.swp,*.zip,*.git,^\.\.\=/\=$' " Filename patterns to hide in netrw
+
 " Plugin variables
 
 " ctrlp
