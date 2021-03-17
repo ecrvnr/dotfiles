@@ -22,7 +22,9 @@ let g:ctrlp_custom_ignore = 'dist\|node_modules\|DS_Store\|git'
 
 " Vim configs
 
-syntax on " Enable syntax highlighting
+set nocompatible " Enter the current millenium
+syntax enable " Enable syntax highlighting
+filetype plugin on " Enable plugins
 set t_Co=256 " Enable 256 colors terminal
 colorscheme onehalflight " Theme
 set clipboard=unnamedplus " Set + register to system clipboard
@@ -32,6 +34,8 @@ set relativenumber " Display relative line numbers
 set shiftwidth=2 " Number of spaces for each indentation
 set tabstop=2 " Number of spaces printed when pressing TAB
 set signcolumn=yes " Always show the signcolumn
+set path+=** " Provides tab-completion for all file-related tasks
+set wildmenu " Display all matching files when we tab complete
 
 """"""""""""" KEYBINDINGS """"""""""""""
 
