@@ -6,11 +6,11 @@ Plug 'dyng/ctrlsf.vim'
 Plug 'sonph/onehalf', { 'rtp': 'vim' }
 call plug#end()
 
-""""""""""""" VARIABLES """"""""""""
+""""""""""""" VARIABLES """""""""""""
 
 " Vim variables
 
-let g:netrw_list_hide= '.*\.swp$,\._.*,.DS_Store,*/tmp/*,*.so,*.swp,*.zip,*.git,^\.\.\=/\=$' " Filename patterns to hide in netrw
+let g:netrw_list_hide = '.*\.swp$,\._.*,.DS_Store,*/tmp/*,*.so,*.swp,*.zip,*.git,^\.\.\=/\=$' " Filename patterns to hide in netrw
 
 " Plugin variables
 
@@ -18,7 +18,7 @@ let g:netrw_list_hide= '.*\.swp$,\._.*,.DS_Store,*/tmp/*,*.so,*.swp,*.zip,*.git,
 let g:ctrlp_user_command = ['.git/', 'git --git-dir=%s/.git ls-files -oc --exclude-standard']
 let g:ctrlp_custom_ignore = 'dist\|node_modules\|DS_Store\|git'
 
-""""""""""""" CONFIGS """"""""""""""
+""""""""""""" CONFIGS """""""""""""
 
 " Vim configs
 
@@ -34,12 +34,20 @@ set relativenumber " Display relative line numbers
 set shiftwidth=2 " Number of spaces for each indentation
 set tabstop=2 " Number of spaces printed when pressing TAB
 set signcolumn=yes " Always show the signcolumn
-set path+=** " Provides tab-completion for all file-related tasks
 set wildmenu " Display all matching files when we tab complete
 
-""""""""""""" KEYBINDINGS """"""""""""""
+""""""""""""" OS SPECIFIC CONFIGS """"""""""""" 
+
+" Windows
+"
+if has("win32") || has("win16")
+  set shell=pwsh.exe
+endif
+
+""""""""""""" KEYBINDINGS """""""""""""
 
 " Vim Keybindings
 
 noremap <silent> <expr> j (v:count == 0 ? 'gj' : 'j') " j will move virtual lines (lines that wrap)
 noremap <silent> <expr> k (v:count == 0 ? 'gk' : 'k') " k will move virtual lines (lines that wrap)
+
